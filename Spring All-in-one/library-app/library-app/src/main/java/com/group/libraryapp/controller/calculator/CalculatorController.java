@@ -21,5 +21,4 @@ public class CalculatorController {
     public int multiplyTwoNumbers(@RequestBody CalculatorMultiplyRequest request ) {
         return request.getNumber1() * request.getNumber2();
     }
-
 }

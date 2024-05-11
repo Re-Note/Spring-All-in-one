@@ -5,11 +5,8 @@ import com.group.libraryapp.dto.assignment2.request.SoldRequest;
 import com.group.libraryapp.dto.assignment2.request.SumResponse;
 import com.group.libraryapp.dto.assignment2.response.SalesSumResponse;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 @RestController

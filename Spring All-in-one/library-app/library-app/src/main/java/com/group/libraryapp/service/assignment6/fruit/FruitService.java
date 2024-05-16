@@ -3,28 +3,28 @@ package com.group.libraryapp.service.assignment6.fruit;
 import com.group.libraryapp.dto.assignment6.request.FruitRequest;
 import com.group.libraryapp.dto.assignment6.request.SoldRequest;
 import com.group.libraryapp.dto.assignment6.response.SalesSumResponse;
-import com.group.libraryapp.repository.assignment6.fruit.FruitRepository;
+import com.group.libraryapp.repository.assignment6.fruit.FruitMySqlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FruitService {
-    private final FruitRepository fruitRepository;
+    private final FruitMySqlRepository fruitMySqlRepository;
 
     @Autowired
-    public FruitService(FruitRepository fruitRepository) {
-        this.fruitRepository = fruitRepository;
+    public FruitService(FruitMySqlRepository fruitMySqlRepository) {
+        this.fruitMySqlRepository = fruitMySqlRepository;
     }
 
     public void addFruit(FruitRequest request){
-        fruitRepository.save(request);
+        fruitMySqlRepository.save(request);
     }
 
     public void updateFruit(SoldRequest request){
-        fruitRepository.update(request);
+        fruitMySqlRepository.update(request);
     }
 
     public SalesSumResponse getFruitSales(String name) {
-        return fruitRepository.getFruitSalesData(name);
+        return fruitMySqlRepository.getFruitSalesData(name);
     }
 }

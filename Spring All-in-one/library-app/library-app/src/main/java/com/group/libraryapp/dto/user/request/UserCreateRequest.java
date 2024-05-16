@@ -1,9 +1,9 @@
 package com.group.libraryapp.dto.user.request;
 
-public class UserCreatedRequest {
+public class UserCreateRequest {
 
     private String name;
-    private Integer age; // Integer는 int 와 다르게 null을 표현 가능함.
+    private Integer age;
 
     public String getName() {
         return name;

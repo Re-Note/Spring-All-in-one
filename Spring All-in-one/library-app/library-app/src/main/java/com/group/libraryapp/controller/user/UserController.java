@@ -1,8 +1,9 @@
 package com.group.libraryapp.controller.user;
 
-import com.group.libraryapp.dto.user.request.UserCreatedRequest;
+import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
+import com.group.libraryapp.service.user.UserServiceV1;
 import com.group.libraryapp.service.user.UserServiceV2;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class UserController {
     }
 
     @PostMapping("/user") // POST /user
-    public void saveUser(@RequestBody UserCreatedRequest request) {
+    public void saveUser(@RequestBody UserCreateRequest request) {
         userService.saveUser(request);
     }
 
@@ -34,11 +35,7 @@ public class UserController {
 
     @DeleteMapping("/user")
     public void deleteUser(@RequestParam String name) {
-       userService.deleteUser(name);
+        userService.deleteUser(name);
     }
 
-    @GetMapping("/user/error-test")
-    public void errorTest() throws IllegalAccessException {
-        throw new IllegalAccessException();
-    }
 }

@@ -1,4 +1,4 @@
-package com.group.libraryapp.controller.assignment3;
+package com.group.libraryapp.controller.assignment3.dice;
 
 import java.util.Scanner;
 

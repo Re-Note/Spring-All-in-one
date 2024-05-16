@@ -1,4 +1,4 @@
-package com.group.libraryapp.controller.assingment2.fruit;
+package com.group.libraryapp.controller.assignment2.fruit;
 
 import com.group.libraryapp.dto.assignment2.request.FruitRequest;
 import com.group.libraryapp.dto.assignment2.request.SoldRequest;

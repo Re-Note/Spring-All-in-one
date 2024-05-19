@@ -1,8 +1,8 @@
-package com.group.libraryapp.repository.assignment6.fruit;
+package com.group.libraryapp.repository.assignment7.fruit;
 
-import com.group.libraryapp.dto.assignment6.request.FruitRequest;
-import com.group.libraryapp.dto.assignment6.request.SoldRequest;
-import com.group.libraryapp.dto.assignment6.response.SalesSumResponse;
+import com.group.libraryapp.dto.assignment7.request.SaveFruitRequest;
+import com.group.libraryapp.dto.assignment7.request.RecordSoldFruitRequest;
+import com.group.libraryapp.dto.assignment7.response.GetFruitStatResponse;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -15,20 +15,20 @@ public class FruitMemoryRepository {
     private final Map<Integer, Fruit> fruitMap = new HashMap<>();
     private int idCounter = 0;
 
-    public void save(FruitRequest request) {
+    public void save(SaveFruitRequest request) {
         int id = ++idCounter;
         Fruit fruit = new Fruit(id, request.getName(), request.getWarehousingDate(), request.getPrice(), true);
         fruitMap.put(id, fruit);
     }
 
-    public void update(SoldRequest request) {
+    public void update(RecordSoldFruitRequest request) {
         Fruit fruit = fruitMap.get(request.getId());
         if (fruit != null) {
             fruit.setStatus(false);
         }
     }
 
-    public SalesSumResponse getFruitSalesData(String name) {
+    public GetFruitStatResponse getFruitSalesData(String name) {
         long salesAmount = 0;
         long notSalesAmount = 0;
 
@@ -42,7 +42,7 @@ public class FruitMemoryRepository {
             }
         }
 
-        return new SalesSumResponse(salesAmount, notSalesAmount);
+        return new GetFruitStatResponse(salesAmount, notSalesAmount);
     }
 
     // Inner class representing a fruit

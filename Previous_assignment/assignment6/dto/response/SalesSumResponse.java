@@ -1,4 +1,4 @@
-package com.group.libraryapp.dto.assignment6.response;
+package com.group.libraryapp.dto.assignment7.response;
 
 public class SalesSumResponse {
 

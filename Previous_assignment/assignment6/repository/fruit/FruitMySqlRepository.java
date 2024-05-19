@@ -1,8 +1,8 @@
-package com.group.libraryapp.repository.assignment6.fruit;
+package com.group.libraryapp.repository.assignment7.fruit;
 
-import com.group.libraryapp.dto.assignment6.request.FruitRequest;
-import com.group.libraryapp.dto.assignment6.request.SoldRequest;
-import com.group.libraryapp.dto.assignment6.response.SalesSumResponse;
+import com.group.libraryapp.dto.assignment7.request.FruitRequest;
+import com.group.libraryapp.dto.assignment7.request.SoldRequest;
+import com.group.libraryapp.dto.assignment7.response.SalesSumResponse;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 

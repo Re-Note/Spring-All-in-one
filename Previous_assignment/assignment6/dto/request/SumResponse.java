@@ -1,4 +1,4 @@
-package com.group.libraryapp.dto.assignment6.request;
+package com.group.libraryapp.dto.assignment7.request;
 
 public class SumResponse {
     private long price;

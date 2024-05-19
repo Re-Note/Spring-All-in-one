@@ -1,9 +1,9 @@
-package com.group.libraryapp.controller.assignment6.fruit;
+package com.group.libraryapp.controller.assignment7.fruit;
 
-import com.group.libraryapp.dto.assignment6.request.FruitRequest;
-import com.group.libraryapp.dto.assignment6.request.SoldRequest;
-import com.group.libraryapp.dto.assignment6.response.SalesSumResponse;
-import com.group.libraryapp.service.assignment6.fruit.FruitService;
+import com.group.libraryapp.dto.assignment7.request.FruitRequest;
+import com.group.libraryapp.dto.assignment7.request.SoldRequest;
+import com.group.libraryapp.dto.assignment7.response.SalesSumResponse;
+import com.group.libraryapp.service.assignment7.fruit.FruitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
